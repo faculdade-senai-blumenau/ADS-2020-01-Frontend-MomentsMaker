@@ -1,7 +1,7 @@
 import { Pais } from './pais';
 
 export interface Estado {
-    Id:BigInt;
+    Id:Number;
     Nome:String;
     Sigla:String;
     IdPais:Pais;

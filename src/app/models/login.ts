@@ -1,5 +1,5 @@
 export interface Login {
-    Id : BigInt;
+    Id : Number;
     Login : String;
     Senha:String;
 }

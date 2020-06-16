@@ -1,7 +1,7 @@
 import { Municipio } from './municipio';
 
 export interface Endereco {
-    Id:BigInt;
+    Id:Number;
     Rua:String;
     Bairro:String;
     Numero:String;

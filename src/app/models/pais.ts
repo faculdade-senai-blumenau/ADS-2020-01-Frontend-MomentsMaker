@@ -1,5 +1,5 @@
 export interface Pais {
-    Id:BigInt;
+    Id:Number;
     Nome:String;
     Sigla:String;
 }

@@ -2,10 +2,10 @@ import { Endereco } from './endereco';
 import { Login } from './login';
 
 export interface Fornecedor {
-    Id:BigInt;
+    Id:Number;
     Cnpj_Cpf:String;
     Nome_Fatasia:String;
-    Tipo_Fornecedor:BigInt;
+    Tipo_Fornecedor:Number;
     Razao_Social:String;
     Suplent:Boolean;
     IdEndereco:Endereco;

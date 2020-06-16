@@ -2,9 +2,9 @@ import { Endereco } from './endereco';
 import { Login } from './login';
 
 export interface Cliente {
-    Id:BigInt;
+    Id:Number;
     CPF:String;
-    Sexo:BigInt;
+    Sexo:Number;
     IdEndereco:Endereco;
     Data_Nascimento:Date;
     Nome:String;

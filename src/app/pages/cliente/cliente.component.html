@@ -1,0 +1,35 @@
+<label>Sexo: 
+    <select [(ngModel)]="sexo">
+        <option *ngFor="let sexo of sexos">{{ sexo }}</option>
+    </select>    
+</label>
+
+<!--
+<div class="error-block" *ngIf="submitted && handleError('sexo', 'required')">
+    <p style="color: red;">Informar o sexo é obrigatório.</p>
+</div>
+-->
+
+<label> CPF:
+    <input type="text" placeholder="CPF" required [(ngModel)]="cpf">
+</label>
+
+<label> Data Nascimento
+    <input type="date" placeholder="Data Nascimento" [(ngModel)]="dataNascimento" name="dataNascimento">
+</label>
+
+<label> Nome
+    <input type="text" placeholder="Nome" [(ngModel)]="nome" name="nome">
+</label>
+
+<label> Sobrenome
+    <input type="text" placeholder="Sobrenome" [(ngModel)]="sobrenome" name="sobrenome">
+</label>
+
+<label> Média Avaliação
+    <input type="text" placeholder="Média Avaliação" [(ngModel)]="mediaAvaliacao" name="mediaAvaliacao">
+</label>
+
+<div>
+    <button (click)="save()">Salvar</button>
+</div>

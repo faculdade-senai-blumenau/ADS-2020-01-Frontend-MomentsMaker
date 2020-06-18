@@ -1,12 +1,12 @@
 import { Municipio } from './municipio';
 
-export interface Endereco {
-    Id:Number;
-    Rua:String;
-    Bairro:String;
-    Numero:String;
-    Logradouro:String;
-    CEP:String;
-    Complemento:String;
-    IDMunicipio:Municipio;
+export class Endereco {
+    id: number;
+    rua: string;
+    bairro: string;
+    numero: number;
+    logradouro:String;
+    cep: string;
+    complemento: string;
+    municipio: Municipio;
 }

@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClienteService {
-
-  apiUrl: string = 'http://localhost:5000/clientes'
+  
+  apiUrl: string = 'http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/cliente'
 
   constructor(private http: HttpClient) { }
 

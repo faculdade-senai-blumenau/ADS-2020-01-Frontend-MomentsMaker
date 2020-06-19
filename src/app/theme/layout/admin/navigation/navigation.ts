@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 export interface NavigationItem {
   id: string;
@@ -39,7 +39,16 @@ const NavigationItems = [
         url: '/forms/basic',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
+      },
+      {
+        id: 'forms-element',
+        title: 'Novo cliente',
+        type: 'item',
+        url: '/clientes',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
       }
+
     ]
   },
   {

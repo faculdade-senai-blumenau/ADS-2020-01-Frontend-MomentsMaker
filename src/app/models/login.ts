@@ -1,5 +1,6 @@
-export interface Login {
-    Id : Number;
-    Login : String;
-    Senha:String;
+export class Login {
+    id : number;
+    usuario : string;
+    senha: string;
+    ehFornecedor: boolean;
 }

@@ -1,5 +1,5 @@
-export interface Pais {
-    Id:Number;
-    Nome:String;
-    Sigla:String;
+export class Pais {
+    id: number;
+    nome: string;
+    sigla: string;
 }

@@ -1,8 +1,8 @@
 import { Pais } from './pais';
 
-export interface Estado {
-    Id:Number;
-    Nome:String;
-    Sigla:String;
-    IdPais:Pais;
+export class Estado {
+    id: number;
+    nome: string;
+    sigla: string;
+    pais: Pais;
 }

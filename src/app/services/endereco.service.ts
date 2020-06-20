@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EnderecoService {
 
-  apiUrl = "http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/endereco"
+  apiUrl = "http://localhost:8080/endereco"
 
   constructor(private http: HttpClient) { }
 

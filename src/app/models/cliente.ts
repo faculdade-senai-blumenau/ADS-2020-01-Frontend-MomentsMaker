@@ -8,7 +8,6 @@ export class Cliente {
     dataNascimento: Date;
     nome: string;
     sobrenome: string;
-    mediaAvaliacao: number;
     login: Login;
     endereco: Endereco;
 }

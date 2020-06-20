@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class EstadoService {
 
-  apiUrl = "http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/estado"
+  apiUrl = "http://localhost:8080/estado"
 
   constructor(private http: HttpClient) { }
 

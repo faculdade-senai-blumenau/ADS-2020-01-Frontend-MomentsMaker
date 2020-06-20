@@ -44,6 +44,14 @@ const NavigationItems = [
         id: 'forms-element',
         title: 'Novo cliente',
         type: 'item',
+        url: '/cliente',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+      {
+        id: 'forms-element',
+        title: 'Clientes',
+        type: 'item',
         url: '/clientes',
         classes: 'nav-item',
         icon: 'feather icon-file-text'

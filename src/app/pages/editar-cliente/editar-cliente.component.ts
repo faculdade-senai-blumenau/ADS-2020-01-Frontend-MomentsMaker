@@ -26,12 +26,15 @@ export class EditarClienteComponent implements OnInit {
       cpf: string
       sexo: string;
       dataNascimento: Date;
+      paisId: number;
       nomePais: string;
       siglaPais: string;
+      estadoId: number;
       nomeEstado: string;
       siglaEstado: string;
+      municipioId: number;
       nomeMunicipio: string;
-      enderecoRua: string;
+      enderecoId: number;
       enderecoBairro: string;
       enderecoNumero: number;
       enderecoLogradouro: string;
@@ -54,12 +57,15 @@ export class EditarClienteComponent implements OnInit {
       cpf: [''],
       sexo: [''],
       dataNascimento: [''],
+      paisId: [''],
       nomePais: [''],
       siglaPais: [''],
+      estadoId: [''],
       nomeEstado: [''],
       siglaEstado: [''],
+      municipioId: [''],
       nomeMunicipio: [''],
-      enderecoRua: [''],
+      enderecoId: [''],
       enderecoBairro: [''],
       enderecoNumero: [''],
       enderecoLogradouro: [''],
@@ -75,12 +81,15 @@ export class EditarClienteComponent implements OnInit {
         'cpf': data.cpf,
         'sexo': data.sexo,
         'dataNascimento': data.dataNascimento,
+        'paisId': data.endereco.municipio.estado.pais.id,
         'nomePais': data.endereco.municipio.estado.pais.nome,
         'siglaPais': data.endereco.municipio.estado.pais.sigla,
+        'estadoId': data.endereco.municipio.estado.id,
         'nomeEstado': data.endereco.municipio.estado.nome,
         'siglaEstado': data.endereco.municipio.estado.sigla,
+        'municipioId': data.endereco.municipio.id,
         'nomeMunicipio': data.endereco.municipio.nome,
-        'enderecoRua': data.endereco.rua,
+        'enderecoId': data.endereco.id,
         'enderecoBairro': data.endereco.bairro,
         'enderecoNumero': data.endereco.numero,
         'enderecoLogradouro': data.endereco.logradouro,
@@ -94,42 +103,38 @@ export class EditarClienteComponent implements OnInit {
   salvar() {
 
     var pais = new Pais();
-    pais.nome = this.nomePais;
-    pais.sigla = this.siglaPais;
+    pais.id = this.editarClienteForm.get('paisId').value;
+    pais.nome = this.editarClienteForm.get('nomePais').value;
+    pais.sigla = this.editarClienteForm.get('siglaPais').value;
 
     var estado = new Estado();
-    estado.nome = this.nomeEstado;
-    estado.sigla = this.siglaEstado;
+    estado.id = this.editarClienteForm.get('estadoId').value;
+    estado.nome = this.editarClienteForm.get('nomeEstado').value;
+    estado.sigla = this.editarClienteForm.get('siglaEstado').value;
     estado.pais = pais;
 
     var municipio = new Municipio();
-    municipio.nome = this.nomeMunicipio;
+    municipio.id = this.editarClienteForm.get('municipioId').value;
+    municipio.nome = this.editarClienteForm.get('nomeMunicipio').value;
     municipio.estado = estado;
 
     var endereco = new Endereco();
-    endereco.rua = this.enderecoRua;
-    endereco.bairro = this.enderecoBairro;
-    endereco.numero = this.enderecoNumero;
-    endereco.logradouro = this.enderecoLogradouro;
-    endereco.cep = this.enderecoCep;
-    endereco.complemento = this.enderecoComplemento;
+    endereco.id = this.editarClienteForm.get('enderecoId').value;
+    endereco.bairro = this.editarClienteForm.get('enderecoBairro').value;
+    endereco.numero = this.editarClienteForm.get('enderecoNumero').value;
+    endereco.logradouro = this.editarClienteForm.get('enderecoLogradouro').value;
+    endereco.cep = this.editarClienteForm.get('enderecoCep').value;
+    endereco.complemento = this.editarClienteForm.get('enderecoComplemento').value;
     endereco.municipio = municipio;
 
     var cliente = new Cliente();
 
-    cliente.cpf = this.cpf;
-
-    if (this.sexo === "Masculino") {
-      cliente.sexo = this.SexoEnum.MASCULINO;
-    }
-    else if (this.sexo === "Feminino") {
-      cliente.sexo = this.SexoEnum.FEMININO;
-    }
-
-    cliente.sexo = this.sexo;
-    cliente.dataNascimento = this.dataNascimento;
-    cliente.nome = this.nome;
-    cliente.sobrenome = this.sobrenome;
+    cliente.id = this.editarClienteForm.get('id').value;
+    cliente.cpf = this.editarClienteForm.get('cpf').value;
+    cliente.sexo = this.editarClienteForm.get('sexo').value;
+    cliente.dataNascimento = this.editarClienteForm.get('dataNascimento').value;
+    cliente.nome = this.editarClienteForm.get('nome').value;
+    cliente.sobrenome = this.editarClienteForm.get('sobrenome').value;
     cliente.endereco = endereco;
 
     this.clienteService.update(cliente)

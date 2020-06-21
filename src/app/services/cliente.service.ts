@@ -30,7 +30,7 @@ export class ClienteService {
   }
 
   update(cliente: Cliente): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.apiUrl + cliente.id, cliente);
+    return this.http.put<ApiResponse>(this.apiUrl, cliente);
   }
 
 }

@@ -32,8 +32,7 @@ export class ClienteComponent implements OnInit {
   siglaPais: string;
   nomeEstado: string;
   siglaEstado: string;
-  nomeMunicipio: string
-  enderecoRua: string;
+  nomeMunicipio: string  
   enderecoBairro: string;
   enderecoNumero: number;
   enderecoLogradouro: string;
@@ -62,14 +61,13 @@ export class ClienteComponent implements OnInit {
       nome: ['', [Validators.required]],
       sobrenome: ['', [Validators.required]],
       cpf: ['', [Validators.required]],
-      sexo: ['', [Validators.required, Validators.pattern(this.cpfRegex)]],
+      sexo: ['', [Validators.required]],
       dataNascimento: ['', [Validators.required]],
       nomePais: [''],
       siglaPais: [''],
       nomeEstado: [''],
       siglaEstado: [''],
       nomeMunicipio: [''],
-      enderecoRua: [''],
       enderecoBairro: [''],
       enderecoNumero: [''],
       enderecoLogradouro: [''],
@@ -95,7 +93,6 @@ export class ClienteComponent implements OnInit {
     municipio.estado = estado;
 
     var endereco = new Endereco();
-    endereco.rua = this.enderecoRua;
     endereco.bairro = this.enderecoBairro;
     endereco.numero = this.enderecoNumero;
     endereco.logradouro = this.enderecoLogradouro;
@@ -109,16 +106,7 @@ export class ClienteComponent implements OnInit {
     login.ehFornecedor = true;
 
     var cliente = new Cliente();
-
     cliente.cpf = this.cpf;
-
-    if (this.sexo === "Masculino") {
-      cliente.sexo = this.SexoEnum.MASCULINO;
-    }
-    else if (this.sexo === "Feminino") {
-      cliente.sexo = this.SexoEnum.FEMININO;
-    }
-
     cliente.sexo = this.sexo;
     cliente.dataNascimento = this.dataNascimento;
     cliente.nome = this.nome;

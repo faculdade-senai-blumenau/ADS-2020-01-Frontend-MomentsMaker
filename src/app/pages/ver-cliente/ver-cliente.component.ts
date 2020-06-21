@@ -24,7 +24,6 @@ export class VerClienteComponent implements OnInit {
   nomeEstado: string;
   siglaEstado: string;
   nomeMunicipio: string
-  enderecoRua: string;
   enderecoBairro: string;
   enderecoNumero: number;
   enderecoLogradouro: string;
@@ -50,7 +49,6 @@ export class VerClienteComponent implements OnInit {
       nomeEstado: [''],
       siglaEstado: [''],
       nomeMunicipio: [''],
-      enderecoRua: [''],
       enderecoBairro: [''],
       enderecoNumero: [''],
       enderecoLogradouro: [''],
@@ -71,7 +69,6 @@ export class VerClienteComponent implements OnInit {
         'nomeEstado': data.endereco.municipio.estado.nome,
         'siglaEstado': data.endereco.municipio.estado.sigla,
         'nomeMunicipio': data.endereco.municipio.nome,
-        'enderecoRua': data.endereco.rua,
         'enderecoBairro': data.endereco.bairro,
         'enderecoNumero': data.endereco.numero,
         'enderecoLogradouro': data.endereco.logradouro,

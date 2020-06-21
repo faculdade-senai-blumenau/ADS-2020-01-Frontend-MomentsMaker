@@ -23,7 +23,7 @@
 
       <div class="form-group">
         <label>Sexo: 
-            <select [(ngModel)]="sexo">
+            <select [(ngModel)]="sexo" formControlName="sexo">
                 <option *ngFor="let sexo of sexos">{{ sexo }}</option>
             </select>    
         </label>
@@ -65,11 +65,6 @@
       </div>
 
       <div class="form-group">
-        <label for="enderecoRua">Rua:</label>
-        <input type="text" formControlName="enderecoRua" placeholder="rua" name="enderecoRua" class="form-control" id="enderecoRua">
-      </div>
-
-      <div class="form-group">
         <label for="enderecoBairro">Bairro:</label>
         <input type="text" formControlName="enderecoBairro" placeholder="Bairro" name="enderecoBairro" class="form-control" id="enderecoBairro">
       </div>
@@ -82,11 +77,6 @@
       <div class="form-group">
         <label for="enderecoLogradouro">Logradouro:</label>
         <input type="text" formControlName="enderecoLogradouro" placeholder="Logradouro do endereço" name="enderecoLogradouro" class="form-control" id="enderecoLogradouro">
-      </div>
-
-      <div class="form-group">
-        <label for="enderecoComplemento">Complemento:</label>
-        <input type="text" formControlName="enderecoComplemento" placeholder="Complemento" name="enderecoComplemento" class="form-control" id="enderecoComplemento">
       </div>
 
       <div class="form-group">

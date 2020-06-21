@@ -1,0 +1,100 @@
+<div class="col-md-6 view-client-container">
+    <h2 class="text-center">Atualizar dados do cliente</h2>
+    <form [formGroup]="editarClienteForm">
+      <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+      </div>
+  
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" formControlName="nome" placeholder="nome" name="nome" class="form-control" id="nome">
+      </div>
+  
+      <div class="form-group">
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" formControlName="sobrenome" placeholder="sobrenome" name="sobrenome" class="form-control" id="sobrenome">
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input type="text" formControlName="cpf" placeholder="cpf" name="cpf" class="form-control" id="cpf">
+      </div>
+
+      <div class="form-group">
+        <label>Sexo: 
+            <select [(ngModel)]="sexo" formControlName="sexo">
+                <option *ngFor="let sexo of sexos">{{ sexo }}</option>
+            </select>    
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input type="date" formControlName="dataNascimento" placeholder="Data de nascimento" name="dataNascimento" class="form-control" id="dataNascimento">
+      </div>
+
+      <div class="form-group">
+        <label for="nomePais">País:</label>
+        <input type="text" formControlName="nomePais" placeholder="Nome do país" name="nomePais" class="form-control" id="nomePais">
+      </div>
+
+      <div class="form-group">
+        <label for="siglaPais">País sigla:</label>
+        <input type="text" formControlName="siglaPais" placeholder="Sigla do país" name="siglaPais" class="form-control" id="siglaPais">
+      </div>
+
+      <div class="form-group">
+        <label for="nomeEstado">Estado:</label>
+        <input type="text" formControlName="nomeEstado" placeholder="Nome do estado" name="nomeEstado" class="form-control" id="nomeEstado">
+      </div>
+
+      <div class="form-group">
+        <label for="siglaEstado">Estado sigla:</label>
+        <input type="text" formControlName="siglaEstado" placeholder="Sigla do estado" name="siglaEstado" class="form-control" id="siglaEstado">
+      </div>
+
+      <div class="form-group">
+        <label for="nomeMunicipio">CEP:</label>
+        <input type="text" formControlName="nomeMunicipio" placeholder="Nome do município" name="nomeMunicipio" class="form-control" id="nomeMunicipio">
+      </div>
+
+      <div class="form-group">
+        <label for="enderecoLogradouro">Logradouro:</label>
+        <input type="text" formControlName="enderecoLogradouro" placeholder="Logradouro" name="enderecoLogradouro" class="form-control" id="enderecoLogradouro">
+      </div>
+
+      <div class="form-group">
+        <label for="enderecoBairro">Bairro:</label>
+        <input type="text" formControlName="enderecoBairro" placeholder="Bairro" name="enderecoBairro" class="form-control" id="enderecoBairro">
+      </div>
+
+      <div class="form-group">
+        <label for="enderecoNumero">Número:</label>
+        <input type="number" formControlName="enderecoNumero" placeholder="Número do endereço" name="enderecoNumero" class="form-control" id="enderecoNumero">
+      </div>
+
+      <div class="form-group">
+        <label for="enderecoLogradouro">Logradouro:</label>
+        <input type="text" formControlName="enderecoLogradouro" placeholder="Logradouro do endereço" name="enderecoLogradouro" class="form-control" id="enderecoLogradouro">
+      </div>
+
+      <div class="form-group">
+        <label for="enderecoCep">CEP:</label>
+        <input type="text" formControlName="enderecoCep" placeholder="CEP" name="enderecoCep" class="form-control" id="enderecoCep">
+      </div>
+
+      <div class="form-group">
+        <label for="enderecoComplemento">Complemento:</label>
+        <input type="text" formControlName="enderecoComplemento" placeholder="Complemento" name="enderecoComplemento" class="form-control" id="enderecoComplemento">
+      </div>
+
+    </form>
+    
+    <div class="form-group">
+        <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+        <button class="btn btn-success" (click)="salvar()">Salvar</button>
+    </div>
+    
+    
+  </div>

@@ -28,6 +28,9 @@ import { NavigationItem } from './theme/layout/admin/navigation/navigation';
 import { NgbButtonsModule, NgbDropdownModule, NgbTabsetModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { ClienteComponent } from './pages/cliente/cliente.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ClientesComponent } from './pages/clientes/clientes.component';
+import { VerClienteComponent } from './pages/ver-cliente/ver-cliente.component';
+import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { HttpClientModule } from '@angular/common/http';
     NavRightComponent,
     ConfigurationComponent,
     ToggleFullScreenDirective,
-    ClienteComponent
+    ClienteComponent,
+    ClientesComponent,
+    VerClienteComponent,
+    EditarClienteComponent
   ],
   imports: [
     BrowserModule,

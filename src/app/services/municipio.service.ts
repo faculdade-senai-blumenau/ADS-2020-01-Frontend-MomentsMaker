@@ -8,7 +8,7 @@ import { Municipio } from '../models/municipio';
 })
 export class MunicipioService {
 
-  apiUrl = "http://localhost:8080/municipio"
+  apiUrl = "http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/municipio"
 
   constructor(private http: HttpClient) { }
 

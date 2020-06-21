@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class PaisService {
 
-  apiUrl = "http://localhost:8080/pais"
+  apiUrl = "http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/pais"
 
   constructor(private http: HttpClient) { }
 

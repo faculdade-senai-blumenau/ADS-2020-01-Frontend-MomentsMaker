@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  apiUrl = "http://localhost:8080/login"
+  apiUrl = "http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/login"
 
   constructor(private http: HttpClient) { }
 

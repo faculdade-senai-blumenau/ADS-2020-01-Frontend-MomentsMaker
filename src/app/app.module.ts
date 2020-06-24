@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { VerClienteComponent } from './pages/ver-cliente/ver-cliente.component';
 import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.component';
+import { CategoriaComponent } from './pages/evento/categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.co
     ClienteComponent,
     ClientesComponent,
     VerClienteComponent,
-    EditarClienteComponent
+    EditarClienteComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

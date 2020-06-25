@@ -22,10 +22,12 @@ export class CategoriaComponent implements OnInit {
     this.categoriaService.getAll().subscribe(data => { this.categorias = data })
   }
   voltar() {
-    this.router.navigate(["dashboard"]);
+    this.router.navigate([""]);
   }
-  gerarLink(idCategoria:String)
+  gerarLink(idCategoria:string)
   {
-    this.router.navigate(["dashboard"]);
+    window.localStorage.removeItem("categoriaID");
+    window.localStorage.setItem("categoriaID", idCategoria);
+    this.router.navigate(["dashboard/evento"]);
   }
 }

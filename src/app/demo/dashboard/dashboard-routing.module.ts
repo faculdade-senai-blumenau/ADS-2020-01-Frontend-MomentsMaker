@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CategoriaComponent } from 'src/app/pages/evento/categoria/categoria.component';
+import { EventoComponent } from 'src/app/pages/evento/evento/evento.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
         path: 'categoria',
         component: CategoriaComponent
       },
+      {
+        path: 'evento',
+        component: EventoComponent
+      }
     ]
   }
 ];

@@ -1,0 +1,38 @@
+<div class="card">
+	<div class="card-header">
+		<h5>Filtro</h5>
+	</div>
+	<div class="card-body">
+		<form>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="floating-label" for="DataInicial">Data inicial</label>
+						<input type="Date" class="form-control" id="DataInicial" [(ngModel)]="dataInicial">
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="floating-label" for="DataFinal" >Data Final</label>
+						<input type="Date" class="form-control" id="DataFinal" [(ngModel)]="dataFinal" >
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-sm-4">
+					<div class="form-group">
+                        <button (click)="filtrar()" class="btn btn-info">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Special title treatment</h5>
+		<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		<a href="#!" class="btn  btn-primary">Go somewhere</a>
+	</div>
+</div>

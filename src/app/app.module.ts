@@ -32,6 +32,7 @@ import { ClientesComponent } from './pages/clientes/clientes.component';
 import { VerClienteComponent } from './pages/ver-cliente/ver-cliente.component';
 import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.component';
 import { CategoriaComponent } from './pages/evento/categoria/categoria.component';
+import { EventoComponent } from './pages/evento/evento/evento.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CategoriaComponent } from './pages/evento/categoria/categoria.component
     ClientesComponent,
     VerClienteComponent,
     EditarClienteComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    EventoComponent
   ],
   imports: [
     BrowserModule,

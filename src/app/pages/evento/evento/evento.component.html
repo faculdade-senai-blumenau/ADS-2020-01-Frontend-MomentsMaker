@@ -7,32 +7,50 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="form-group">
-						<label class="floating-label" for="DataInicial">Data inicial</label>
-						<input type="Date" class="form-control" id="DataInicial" [(ngModel)]="dataInicial">
+						<label class="floating-label" for="dataInicial">Data inicial</label>
+						<input type="Date" class="form-control" id="dataInicial" [(ngModel)]="dataInicial" name="dataIncial">
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group">
-						<label class="floating-label" for="DataFinal" >Data Final</label>
-						<input type="Date" class="form-control" id="DataFinal" [(ngModel)]="dataFinal" >
+						<label class="floating-label" for="dataFinal">Data Final</label>
+						<input type="Date" class="form-control" id="dataFinal" [(ngModel)]="dataFinal" name="dataFinal">
 					</div>
 				</div>
 			</div>
-            <div class="row">
-                <div class="col-sm-4">
+			<div class="row">
+				<div class="col-sm-4">
 					<div class="form-group">
-                        <button (click)="filtrar()" class="btn btn-info">Pesquisar</button>
-                    </div>
-                </div>
-            </div>
-        </form>
+						<button (click)="filtrar()" class="btn btn-info">Pesquisar</button>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
 </div>
-
-<div class="card">
-	<div class="card-body">
-		<h5 class="card-title">Special title treatment</h5>
-		<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-		<a href="#!" class="btn  btn-primary">Go somewhere</a>
+<div *ngFor="let fornecedor of fornecedores">
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">{{fornecedor.nome_fantasia}}</h5>
+			<div class="row">
+			<div id="carrocelFornecedorImg" class="carousel slide col-3" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item">
+						<img class="img-fluid d-block " style="width: 100px; height: 100px;" src="../../../../assets/images/fornecedorCarrocel/01.jpg" alt="First slide">
+					</div>
+					<div class="carousel-item active">
+						<img class="img-fluid d-block " src="../../../../assets/images/fornecedorCarrocel/02.jpg" alt="Second slide">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carrocelFornecedorImg" role="button"
+					data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+						class="sr-only">Previous</span></a>
+				<a class="carousel-control-next" href="#carrocelFornecedorImg" role="button"
+					data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span
+						class="sr-only">Next</span></a>
+			</div>
+			<p class="card-text col-9">Nota {{fornecedor.mediaAvaliacao}}</p>
+			<a href="#!" class="btn  btn-primary">Selecionar</a>
+		</div>
 	</div>
 </div>

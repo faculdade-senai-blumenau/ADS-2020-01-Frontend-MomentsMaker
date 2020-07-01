@@ -1,0 +1,32 @@
+<div>
+    <div class="row" style="margin: 20px; margin-left: 30px;">
+        <button (click)="voltar()" class="btn btn-danger">Cancelar</button>
+    </div>
+    <div class="row">
+        <div>
+            <div class="col-md-2 offset-md-1">
+                <div class="card text-white bg-dark " style="width: 300px; height:200px ;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <h5 class="card-text text-white">
+                            {{categoriaObj.nome}}</h5>
+                        <p class="card-text text-white">{{categoriaObj.descricao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-md-2 offset-md-1">
+                <div class="card text-white bg-dark " style="width: 300px; height:200px ;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <h5 class="card-text text-white">
+                            {{fornecedor.nome_fantasia}}</h5>
+                        <p class="card-text text-white">{{fornecedor.mediaAvaliacao}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

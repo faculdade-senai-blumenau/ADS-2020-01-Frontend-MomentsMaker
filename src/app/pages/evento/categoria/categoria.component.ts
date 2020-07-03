@@ -22,7 +22,7 @@ export class CategoriaComponent implements OnInit {
     this.categoriaService.getAll().subscribe(data => { this.categorias = data })
   }
   voltar() {
-    this.router.navigate([""]);
+    this.router.navigate(["default"]);
   }
   gerarLink(idCategoria:string)
   {

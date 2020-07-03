@@ -32,7 +32,7 @@ export class EventoComponent implements OnInit {
 
   }
   voltar() {
-    this.router.navigate([""]);
+    this.router.navigate(["dashboard/categoria"]);
   }
   filtrar()
   {

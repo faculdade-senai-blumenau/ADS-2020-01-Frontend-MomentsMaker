@@ -1,14 +1,16 @@
 import { Categoria } from './categoria';
 import { Cliente } from './cliente';
+import { Fornecedor } from './fornecedor';
 
-export interface Evento {
-    Id:Number;
-    Valor:Number;
-    Criacao:Date;
-    DataInicio:Date;
-    DataFim:Date;
-    HoraInicio:Date;
-    HoraFim:Date;
-    Categoria:Categoria;
-    Cliente:Cliente;
+export class Evento {
+    id:Number;
+    valor:Number;
+    criacao:String;
+    dataInicio:Date;
+    dataFim:Date;
+    horaInicio:Date;
+    horaFim:Date;
+    categoria:Categoria;
+    cliente:Cliente;
+    fornecedor:Fornecedor[];
 }

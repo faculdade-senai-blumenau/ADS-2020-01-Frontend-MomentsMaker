@@ -34,17 +34,9 @@ const NavigationItems = [
     children: [
       {
         id: 'forms-element',
-        title: 'Criar um novo',
-        type: 'item',
-        url: '/forms/basic',
-        classes: 'nav-item',
-        icon: 'feather icon-file-text'
-      },
-      {
-        id: 'forms-element',
         title: 'Novo cliente',
         type: 'item',
-        url: '/cliente',
+        url: '/dashboard/cliente',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
       },
@@ -52,7 +44,7 @@ const NavigationItems = [
         id: 'forms-element',
         title: 'Clientes',
         type: 'item',
-        url: '/clientes',
+        url: '/dashboard/clientes',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
       }

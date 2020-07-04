@@ -103,7 +103,7 @@ export class ClienteComponent implements OnInit {
     const login = new Login();
     login.usuario = "email@email.com";
     login.senha = "password1!";
-    login.ehFornecedor = true;
+    login.ehFornecedor = false;
 
     var cliente = new Cliente();
     cliente.cpf = this.cpf;
@@ -113,8 +113,6 @@ export class ClienteComponent implements OnInit {
     cliente.sobrenome = this.sobrenome;
     cliente.login = login;
     cliente.endereco = endereco;
-
-    console.log(JSON.stringify(cliente));
 
     cliente = await this.clienteService.save(cliente);
 

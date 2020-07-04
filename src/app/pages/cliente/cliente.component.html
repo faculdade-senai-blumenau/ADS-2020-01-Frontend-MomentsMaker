@@ -1,66 +1,80 @@
-<label> Nome
-    <input type="text" placeholder="Nome" [(ngModel)]="nome" name="nome">
-</label>
-
-<label> Sobrenome
-    <input type="text" placeholder="Sobrenome" [(ngModel)]="sobrenome" name="sobrenome">
-</label>
-
-<label> CPF:
-    <input type="text" placeholder="CPF" required [(ngModel)]="cpf">
-</label>
-
-<label>Sexo: 
-    <select [(ngModel)]="sexo">
-        <option *ngFor="let sexo of sexos">{{ sexo }}</option>
-    </select>    
-</label>
-
-<!--
-<div class="error-block" *ngIf="submitted && handleError('sexo', 'required')">
-    <p style="color: red;">Informar o sexo é obrigatório.</p>
-</div>
--->
-
-<label> Data Nascimento
-    <input type="date" placeholder="Data Nascimento" [(ngModel)]="dataNascimento" name="dataNascimento">
-</label>
-
-<label> País
-    <input type="text" placeholder="Nome país" [(ngModel)]="nomePais">
-    <input type="text" placeholder="Sigla país" [(ngModel)]="siglaPais">
-</label>
-
-<label> Estado
-    <input type="text" placeholder="Nome estado" [(ngModel)]="nomeEstado">
-    <input type="text" placeholder="Sigla estado" [(ngModel)]="siglaEstado">
-</label>
-
-<label> Município
-    <input type="text" placeholder="Nome município" [(ngModel)]="nomeMunicipio">
-</label>
-
-<label> Bairro
-    <input type="text" placeholder="Nome do bairro" [(ngModel)]="enderecoBairro">
-</label>
-
-<label> Número
-    <input type="number" placeholder="Número da moradia" [(ngModel)]="enderecoNumero">
-</label>
-
-<label> Logradouro
-    <input type="text" placeholder="Logradouro" [(ngModel)]="enderecoLogradouro">
-</label>
-
-<label> CEP
-    <input type="text" placeholder="CEP" [(ngModel)]="enderecoCep">
-</label>
-
-<label> Complemento
-    <input type="text" placeholder="Complemento" [(ngModel)]="enderecoComplemento">
-</label>
-
-<div>
-    <button (click)="save()">Salvar</button>
-    <button (click)="voltar()">Voltar</button>
-</div>
+<div class="row">
+    <div class="col-sm-12">
+      <div class="col-md-12">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Nome</label>
+              <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="nome" name="nome">
+            </div>
+            <div class="form-group col-md-6">
+              <label>Sobrenome</label>
+              <input type="text" class="form-control" placeholder="Sobrenome" [(ngModel)]="sobrenome" name="sobrenome">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>CPF</label>
+              <input required type="text" class="form-control" placeholder="000.000.000-00" required [(ngModel)]="cpf" name="cpf">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Sexo</label>
+                <select style="height: 45px;" class="form-control" [(ngModel)]="sexo" name="sexo">
+                  <option *ngFor="let sexo of sexos">{{ sexo }}</option>
+              </select>  
+            </div>
+            <div class="form-group col-md-4">
+              <label>Data Nascimento</label>
+              <input type="date" class="form-control" placeholder="dia/mês/ano" [(ngModel)]="dataNascimento" name="dataNascimento">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Logradouro</label>
+              <input type="text" class="form-control" placeholder="Logradouro" [(ngModel)]="enderecoLogradouro" name="enderecoLogradouro">
+            </div>
+            <div class="form-group col-md-1">
+              <label>Número</label>
+              <input type="number" class="form-control" placeholder="Nº" [(ngModel)]="enderecoNumero" name="enderecoNumero">
+            </div>
+            <div class="form-group col-md-2">
+              <label>Bairro</label>
+              <input type="text" class="form-control" placeholder="Bairro" [(ngModel)]="enderecoBairro" name="enderecoBairro">
+            </div>
+            <div class="form-group col-md-2">
+              <label>Cidade</label>
+              <input type="text" placeholder="Cidade"  class="form-control" [(ngModel)]="nomeMunicipio" name="nomeMunicipio">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Complemento</label>
+              <input type="text" class="form-control" placeholder="Complemento" [(ngModel)]="enderecoComplemento" name="enderecoComplemento">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>CEP</label>
+              <input type="text" placeholder="00.000-000" class="form-control" [(ngModel)]="enderecoCep" name="enderecoCep">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Estado</label>
+              <input type="text" class="form-control" placeholder="" [(ngModel)]="nomeEstado" name="nomeEstado">
+            </div>
+            <div class="form-group col-md-1">
+              <label>UF</label>
+              <input type="text" class="form-control" placeholder="SC" [(ngModel)]="siglaEstado" name="siglaEstado">
+            </div>
+            <div class="form-group col-md-3">
+              <label>País</label>
+              <input type="text" placeholder="Nome país" class="form-control" [(ngModel)]="nomePais" name="nomePais">
+            </div>
+            <div class="form-group col-md-1">
+              <label>UF</label>
+              <input type="text" placeholder="BR" class="form-control" [(ngModel)]="siglaPais" name="siglaPais">
+            </div>
+          </div>
+  
+          <button style="margin: 10px;" class="btn btn-primary" (click)="save()">Salvar</button>
+          <button class="btn btn-danger" (click)="voltar()">Voltar</button>
+      </div>
+    </div>
+  </div>  
+  

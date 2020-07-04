@@ -30,13 +30,13 @@ export class ClientesComponent implements OnInit {
   ver(cliente: Cliente) {
     window.localStorage.removeItem("clienteId");
     window.localStorage.setItem("clienteId", cliente.id.toString());
-    this.router.navigate(['ver-cliente']);
+    this.router.navigate(['/dashboard/ver-cliente']);
   }
 
   editar(cliente: Cliente) {
     window.localStorage.removeItem("clienteId");
     window.localStorage.setItem("clienteId", cliente.id.toString());
-    this.router.navigate(['editar-cliente'])
+    this.router.navigate(['/dashboard/editar-cliente'])
   }
 
   deletar(cliente: Cliente) {

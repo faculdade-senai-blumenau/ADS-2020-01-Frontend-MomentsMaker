@@ -142,7 +142,7 @@ export class EditarClienteComponent implements OnInit {
       data => {
         if (data.status === 200) {
            alert("Cliente atualizado com sucesso!");
-           this.router.navigate(['clientes']);
+           this.router.navigate(['/dashboard/default']);
         } else {
           alert(data.message);
         }

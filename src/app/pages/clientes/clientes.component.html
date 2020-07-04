@@ -1,25 +1,38 @@
-<table class="center highlight responsive-table">
-    <tr>
-      <th>Nome</th>
-      <th>Sobrenome</th>
-      <th>CPF</th>
-      <th>Sexo</th>
-      <th>Data nascimento</th>
-      <th>Média avaliação</th>
-    </tr>
-    <tr *ngFor="let cliente of clientes">
-      <td>{{cliente.nome}}</td>
-      <td>{{cliente.sobrenome}}</td>
-      <td>{{cliente.cpf}}</td>
-      <td>{{cliente.sexo}}</td>
-      <td>{{cliente.dataNascimento}}</td>
-      <td>{{cliente.mediaAvaliacao}}</td>
-      <td>
-        <button (click)="ver(cliente)"> Ver</button>
-        <button (click)="editar(cliente)"> Editar </button>
-        <button (click)="deletar(cliente)"> Deletar </button>
-      </td>
-    </tr>
-  </table>
-
-  <button (click)="voltar()">Voltar</button>
+<div class="row">
+  <div class="col-md-12">
+    <app-card cardTitle="Visualizar os clientes" blockClass="table-border-style">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Sobrenome</th>
+              <th>CPF</th>
+              <th>Sexo</th>
+              <th>Data nascimento</th>
+              <th>Média avaliação</th>
+              <th>Alterações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cliente of clientes">
+              <td>{{cliente.nome}}</td>
+              <td>{{cliente.sobrenome}}</td>
+              <td>{{cliente.cpf}}</td>
+              <td>{{cliente.sexo}}</td>
+              <td>{{cliente.dataNascimento}}</td>
+              <td>{{cliente.mediaAvaliacao}}</td>
+              <td>
+                <div>
+                <button style="margin: 10px;" class="btn btn-primary" (click)="editar(cliente)"> Editar </button>
+                <button class="btn btn-danger" (click)="deletar(cliente)"> Deletar </button>
+              </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
+      </div>
+    </app-card>
+  </div>
+</div>

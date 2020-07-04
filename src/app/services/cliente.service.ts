@@ -9,7 +9,7 @@ import { ApiResponse } from '../models/ApiResponse';
 })
 export class ClienteService {
   
-  apiUrl: string = 'http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/cliente/'
+  apiUrl: string = 'http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/cliente'
 
   constructor(private http: HttpClient) { }
 

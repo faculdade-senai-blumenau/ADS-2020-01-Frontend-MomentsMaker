@@ -47,6 +47,14 @@ const NavigationItems = [
         url: '/dashboard/clientes',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
+      },
+      {
+        id: 'forms-element',
+        title: 'Novo Evento',
+        type: 'item',
+        url: '/dashboard/categoria',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
       }
 
     ]

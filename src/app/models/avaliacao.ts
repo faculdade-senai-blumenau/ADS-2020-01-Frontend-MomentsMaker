@@ -7,4 +7,5 @@ export interface Avaliacao {
     Nota:Number;
     IdFornecedor:Fornecedor;
     IdCliente:Cliente;
+    deCliente:Boolean;
 }

@@ -1,8 +1,5 @@
-import { Fornecedor } from './fornecedor';
-import { Cliente } from './cliente';
-
-export interface Categoria {
-  id:Number;
+export class Categoria {
+  id:String;
   nome:String;
   tipoProfissional: String;
   descricao:String;

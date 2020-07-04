@@ -10,7 +10,6 @@ import { ApiResponse } from '../models/ApiResponse';
 export class CategoriaService {
 
   apiUrl: string = 'http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/categorias/'
-
   constructor(private http: HttpClient) { }
 
   async save(categoria: Categoria) {
@@ -25,7 +24,7 @@ export class CategoriaService {
     return this.http.delete<Categoria>(this.apiUrl + id);
   }
 
-  getById(id: string): Observable<Categoria> {
+  getById(id: String): Observable<Categoria> {
     return this.http.get<Categoria>(this.apiUrl + id);
   }
 

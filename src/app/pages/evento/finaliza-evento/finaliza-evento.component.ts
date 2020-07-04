@@ -37,8 +37,13 @@ export class FinalizaEventoComponent implements OnInit {
     var fornecedorid = window.localStorage.getItem("fornecedorID");
     window.localStorage.removeItem("categoriaID");
     window.localStorage.removeItem("fornecedorID");
+
     this.evento = new Evento()
-    this.categoriaService.getById(categoriaid).subscribe(data => { this.categoriaObj = data })
+    
+    this.categoriaService.getById(categoriaid).subscribe(data => { 
+      this.categoriaObj = data; 
+    })
+    
     this.fornecedorService.getById(fornecedorid).subscribe(data => { this.fornecedor = data })
     this.evento.categoria = this.categoriaObj
     this.clienteService.getById('24').subscribe(data => { this.evento.cliente = data })
@@ -49,11 +54,16 @@ export class FinalizaEventoComponent implements OnInit {
     this.router.navigate(["dashboard/evento"]);
   }
   salvar() {
-    this.evento.criacao = formatDate(new Date(), 'yyyy-MM-dd', 'en');
+    this.evento.criacao = formatDate(new Date(), 'yyyy-MM-dd:HH:mm', 'en');
 
    // this.evento.horaFim = formatDate(this.horaFim, 'HH:mm:ss', 'en');
    //this.evento.horaInicio = formatDate(this.horaInicio, 'HH:mm:ss', 'en');
-   this.dataFinal.setHours(this.horaFim.getHours())
+
+   this.dataInicial + ":" + this.horaInicio
+
+
+
+   this.dataFinal.setDate(this.dataFinal.getDate()); 
     this.evento.dataFim = this.dataFinal;
     this.dataInicial.setHours( this.horaInicio.getHours());
     this.evento.dataInicio = this.dataInicial

@@ -37,39 +37,36 @@ export class FinalizaEventoComponent implements OnInit {
     var fornecedorid = window.localStorage.getItem("fornecedorID");
     window.localStorage.removeItem("categoriaID");
     window.localStorage.removeItem("fornecedorID");
+    this.evento = new Evento();
 
-    this.evento = new Evento()
-    
-    this.categoriaService.getById(categoriaid).subscribe(data => { 
-      this.categoriaObj = data; 
-    })
-    
-    this.fornecedorService.getById(fornecedorid).subscribe(data => { this.fornecedor = data })
+    this.categoriaService.getById(categoriaid).then( data => {
+      this.categoriaObj = data});
+    this.fornecedorService.getById(fornecedorid).then(data => { 
+      this.fornecedor = data });
+
     this.evento.categoria = this.categoriaObj
     this.clienteService.getById('24').subscribe(data => { this.evento.cliente = data })
-    this.evento.fornecedor.push(this.fornecedor)
+    this.evento.fornecedor = this.fornecedor;
   }
 
   voltar() {
     this.router.navigate(["dashboard/evento"]);
   }
   salvar() {
-    this.evento.criacao = formatDate(new Date(), 'yyyy-MM-dd:HH:mm', 'en');
+  if(this.evento.categoria == null){
+    this.evento.categoria = this.categoriaObj;
+  }
 
-   // this.evento.horaFim = formatDate(this.horaFim, 'HH:mm:ss', 'en');
-   //this.evento.horaInicio = formatDate(this.horaInicio, 'HH:mm:ss', 'en');
+  if(this.evento.fornecedor == null){
+    this.evento.fornecedor = this.fornecedor;
+  }
 
-   this.dataInicial + ":" + this.horaInicio
+   this.evento.dataInicio = this.dataInicial + ":" + this.horaInicio;
+   
+   this.evento.dataFim = this.dataFinal + ":" + this.horaFim;
 
+   this.eventoService.save(this.evento);
 
-
-   this.dataFinal.setDate(this.dataFinal.getDate()); 
-    this.evento.dataFim = this.dataFinal;
-    this.dataInicial.setHours( this.horaInicio.getHours());
-    this.evento.dataInicio = this.dataInicial
-    this.eventoService.save(this.evento);
-    console.log("SALVOU");
-    console.log(this.evento);
     this.router.navigate(["dashboard"])
   }
 }

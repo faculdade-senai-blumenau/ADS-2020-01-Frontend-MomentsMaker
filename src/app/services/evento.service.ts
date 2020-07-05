@@ -25,8 +25,8 @@ export class EventoService {
     return this.http.delete<Evento>(this.apiUrl + id);
   }
 
-  getById(id: string): Observable<Evento> {
-    return this.http.get<Evento>(this.apiUrl + id);
+  async getById(id: string){
+    return await this.http.get<Evento>(this.apiUrl + id).toPromise();
   }
 
   update(evento: Evento): Observable<ApiResponse> {

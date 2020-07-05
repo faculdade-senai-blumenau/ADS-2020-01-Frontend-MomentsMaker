@@ -5,12 +5,9 @@ import { Fornecedor } from './fornecedor';
 export class Evento {
     id:Number;
     valor:Number;
-    criacao:String;
-    dataInicio:Date;
-    dataFim:Date;
-    horaInicio:Date;
-    horaFim:Date;
+    dataInicio:String;
+    dataFim:String;
     categoria:Categoria;
     cliente:Cliente;
-    fornecedor:Fornecedor[];
+    fornecedor:Fornecedor;
 }

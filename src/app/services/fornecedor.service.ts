@@ -25,8 +25,8 @@ export class FornecedorService {
     return this.http.delete<Fornecedor>(this.apiUrl + id);
   }
 
-  getById(id: string): Observable<Fornecedor> {
-    return this.http.get<Fornecedor>(this.apiUrl + id);
+  async getById(id: string){
+    return await this.http.get<Fornecedor>(this.apiUrl + id).toPromise();
   }
 
   update(fornecedor: Fornecedor): Observable<ApiResponse> {

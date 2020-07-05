@@ -24,8 +24,8 @@ export class CategoriaService {
     return this.http.delete<Categoria>(this.apiUrl + id);
   }
 
-  getById(id: String): Observable<Categoria> {
-    return this.http.get<Categoria>(this.apiUrl + id);
+  async getById(id: string){
+    return await this.http.get<Categoria>(this.apiUrl + id).toPromise();
   }
 
   update(categoria: Categoria): Observable<ApiResponse> {

@@ -19,11 +19,21 @@ import { NavSearchComponent } from './theme/layout/admin/nav-bar/nav-left/nav-se
 import { NavRightComponent } from './theme/layout/admin/nav-bar/nav-right/nav-right.component';
 import { ConfigurationComponent } from './theme/layout/admin/configuration/configuration.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { ToggleFullScreenDirective } from './theme/shared/full-screen/toggle-full-screen';
 
 /* Menu Items */
 import { NavigationItem } from './theme/layout/admin/navigation/navigation';
 import { NgbButtonsModule, NgbDropdownModule, NgbTabsetModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { ClienteComponent } from './pages/cliente/cliente.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ClientesComponent } from './pages/clientes/clientes.component';
+import { VerClienteComponent } from './pages/ver-cliente/ver-cliente.component';
+import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.component';
+import { CategoriaComponent } from './pages/evento/categoria/categoria.component';
+import { EventoComponent } from './pages/evento/evento/evento.component';
+import { FinalizaEventoComponent } from './pages/evento/finaliza-evento/finaliza-evento.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +50,14 @@ import { NgbButtonsModule, NgbDropdownModule, NgbTabsetModule, NgbTooltipModule 
     NavSearchComponent,
     NavRightComponent,
     ConfigurationComponent,
-    ToggleFullScreenDirective
+    ToggleFullScreenDirective,
+    ClienteComponent,
+    ClientesComponent,
+    VerClienteComponent,
+    EditarClienteComponent,
+    CategoriaComponent,
+    EventoComponent,
+    FinalizaEventoComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +67,9 @@ import { NgbButtonsModule, NgbDropdownModule, NgbTabsetModule, NgbTooltipModule 
     NgbDropdownModule,
     NgbTooltipModule,
     NgbButtonsModule,
-    NgbTabsetModule
+    NgbTabsetModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [NavigationItem],
   bootstrap: [AppComponent]

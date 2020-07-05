@@ -1,0 +1,107 @@
+<div class="row">
+  <div class="col-md-12">
+    <app-card cardTitle="Atualizar dados do cliente" blockClass="table-border-style">
+      <div class="table-responsive">
+          <form [formGroup]="editarClienteForm">
+            <h5 class="mt-5">Dados Pessoais</h5>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="id">Id</label>
+                <input readonly=“true” type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="nome">Nome:</label>
+                <input type="text" formControlName="nome" placeholder="nome" name="nome" class="form-control" id="nome">
+            </div>
+              <div class="form-group col-md-4">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" formControlName="sobrenome" placeholder="sobrenome" name="sobrenome" class="form-control" id="sobrenome">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="cpf">CPF:</label>
+                <input readonly=“true” type="text" formControlName="cpf" placeholder="cpf" name="cpf" class="form-control" id="cpf">
+              </div>
+            </div>
+      
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                  <label for="inputState">Sexo</label>
+                  <select [(ngModel)]="sexo" formControlName="sexo" class="form-control">
+                    <option *ngFor="let sexo of sexos">{{ sexo }}</option>
+                </select>    
+              </div>
+              <div class="form-group col-md-4">
+                <label for="dataNascimento">Data Nascimento</label>
+                <input type="date" formControlName="dataNascimento" name="dataNascimento" class="form-control" id="dataNascimento">
+              </div>
+            </div>
+            
+            <h5 class="mt-5">Endereço</h5>
+
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="enderecoCep">CEP</label>
+                <input type="text" formControlName="enderecoCep" placeholder="CEP" name="enderecoCep" class="form-control" id="enderecoCep">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="enderecoLogradouro">Logradouro</label>
+                <input type="text" formControlName="enderecoLogradouro" placeholder="Logradouro" name="enderecoLogradouro" class="form-control" id="enderecoLogradouro">
+              </div>
+
+              <div class="form-group col-md-1">
+                <label for="enderecoNumero">Número</label>
+                <input type="number" formControlName="enderecoNumero" placeholder="Número do endereço" name="enderecoNumero" class="form-control" id="enderecoNumero">
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="enderecoBairro">Bairro</label>
+                <input type="text" formControlName="enderecoBairro" placeholder="Bairro" name="enderecoBairro" class="form-control" id="enderecoBairro">
+              </div>
+
+              <div class="form-group col-md-2">
+                <label for="nomeMunicipio">Cidade</label>
+                <input type="text" formControlName="nomeMunicipio" placeholder="Cidade" name="nomeMunicipio" class="form-control" id="nomeMunicipio">
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="enderecoComplemento">Complemento</label>
+                <input type="text" formControlName="enderecoComplemento" placeholder="Complemento" name="enderecoComplemento" class="form-control" id="enderecoComplemento">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="nomeEstado">Estado</label>
+                <input type="text" formControlName="nomeEstado" placeholder="Nome do estado" name="nomeEstado" class="form-control" id="nomeEstado">
+              </div>
+              <div class="form-group col-md-1">
+                <label for="siglaEstado">UF Estado</label>
+                <input type="text" formControlName="siglaEstado" placeholder="Sigla do estado" name="siglaEstado" class="form-control" id="siglaEstado">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="siglaPais">País</label>
+                <input type="text" formControlName="nomePais" placeholder="Nome do país" name="nomePais" class="form-control" id="nomePais">
+              </div>
+              <div class="form-group col-md-1">
+                <label for="siglaPais">UF País</label>
+                <input type="text" formControlName="siglaPais" placeholder="Sigla do país" name="siglaPais" class="form-control" id="siglaPais">
+              </div>
+            </div>
+          </form>
+
+          <div class="form-group">
+            <button style="margin: 10px;" class="btn btn-primary" (click)="salvar()">Salvar</button>
+            <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+        </div>
+      </div>
+    </app-card>
+  </div>
+</div>

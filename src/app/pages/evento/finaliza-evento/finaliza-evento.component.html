@@ -1,0 +1,83 @@
+<div>
+    <div class="row" style="margin: 20px; margin-left: 30px;">
+        <button (click)="voltar()" class="btn btn-danger">Cancelar</button>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5>Defina a data do evento</h5>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div>
+                    <div class="col-md-2 offset-md-1">
+                        <div class="card text-white bg-dark " style="width: 300px; height:200px ;">
+                            <div class="card-header">
+                                <h5 class="card-text text-white">Categoria</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-text text-white">
+                                    {{categoriaObj.nome}}</h5>
+                                <p class="card-text text-white">{{categoriaObj.descricao}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="col-md-2 offset-md-1">
+                        <div class="card text-white bg-dark " style="width: 300px; height:200px ;">
+                            <div class="card-header">
+                                <h5 class="card-text text-white">Fornecedor</h5>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-text text-white">
+                                    {{fornecedor.nome_fantasia}}</h5>
+                                <p class="card-text text-white">{{fornecedor.mediaAvaliacao}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="floating-label" for="dataInicial">Data inicial</label>
+                            <input type="Date" class="form-control" id="dataInicial" [(ngModel)]="dataInicial"
+                                name="dataIncial">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="floating-label" for="dataInicial">Hora inicio</label>
+                            <input type="time" class="form-control" id="dataInicial" [(ngModel)]="horaInicio"
+                                name="dataIncial">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="floating-label" for="dataFinal">Data Final</label>
+                            <input type="Date" class="form-control" id="dataFinal" [(ngModel)]="dataFinal"
+                                name="dataFinal">
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="floating-label" for="dataFinal">Hora Fim</label>
+                            <input type="time" class="form-control" id="dataFinal" [(ngModel)]="horaFim"
+                                name="dataFinal">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <button (click)="salvar()" class="btn btn-info">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

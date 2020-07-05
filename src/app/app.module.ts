@@ -31,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { VerClienteComponent } from './pages/ver-cliente/ver-cliente.component';
 import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.component';
+import { CategoriaComponent } from './pages/evento/categoria/categoria.component';
+import { EventoComponent } from './pages/evento/evento/evento.component';
+import { FinalizaEventoComponent } from './pages/evento/finaliza-evento/finaliza-evento.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.co
     ClienteComponent,
     ClientesComponent,
     VerClienteComponent,
-    EditarClienteComponent
+    EditarClienteComponent,
+    CategoriaComponent,
+    EventoComponent,
+    FinalizaEventoComponent
   ],
   imports: [
     BrowserModule,

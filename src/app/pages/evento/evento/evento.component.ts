@@ -12,15 +12,16 @@ import { Evento } from 'src/app/models/evento';
 })
 export class EventoComponent implements OnInit {
 
-  constructor(private fornecedroSercice:FornecedorService,
+  constructor(private fornecedroService:FornecedorService,
+     private fornecedorService: FornecedorService,
      private EventoService:EventoService,
      private router: Router) {
   }
   
   fornecedores: Fornecedor[]
   evento: Evento
-  dataInicial:Date
-  dataFinal:Date
+  dataInicio:Date
+  dataFim:Date
   idCategoria:string
 
   ngOnInit(): void {
@@ -28,16 +29,28 @@ export class EventoComponent implements OnInit {
     this.idCategoria = categoria.toString();
     console.log(categoria);
     window.localStorage.removeItem("categoriaID");
-    this.fornecedroSercice.getAll().subscribe(data => { this.fornecedores = data })
+    this.fornecedroService.getAll().subscribe(data => { this.fornecedores = data })
 
   }
   voltar() {
     this.router.navigate(["dashboard/categoria"]);
   }
   filtrar()
-  {
-    console.log(this.dataInicial);
-    console.log(this.dataFinal);
+  {   
+
+    console.log(this.dataInicio, this.dataFim);
+    if (this.dataInicio === undefined|| this.dataFim === undefined) {
+      return alert("Data inválida. Selecione uma data válida!")
+    }
+
+    this.fornecedorService.getPorDisponibilidade(this.dataInicio, this.dataFim).subscribe(data => {
+      console.log(this.dataInicio, this.dataFim);
+      this.fornecedores = data;
+      console.log(this.dataInicio, this.dataFim);
+    });
+    
+    console.log(this.dataInicio, this.dataFim);
+    
   }
   gerarLink(idFornecedor:string)
   {

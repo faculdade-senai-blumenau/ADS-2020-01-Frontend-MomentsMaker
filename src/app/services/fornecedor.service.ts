@@ -10,6 +10,7 @@ import { ApiResponse } from '../models/ApiResponse';
 export class FornecedorService {
 
   apiUrl: string = 'http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/fornecedores/'
+  apiGetPorDisponibilidade: string = 'http://momentsmaker-env.eba-bxhiwmf3.sa-east-1.elasticbeanstalk.com/fornecedores/buscadisponibilidade?'
 
   constructor(private http: HttpClient) { }
 
@@ -31,6 +32,10 @@ export class FornecedorService {
 
   update(fornecedor: Fornecedor): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.apiUrl, fornecedor);
+  }
+
+  getPorDisponibilidade(dataInicio: Date, dataFim: Date): Observable<Fornecedor[]> {
+    return this.http.get<Fornecedor[]>(this.apiGetPorDisponibilidade + "dataInicio=" + dataInicio + "&dataFim=" + dataFim);
   }
 
 }

@@ -49,7 +49,8 @@ export class PerfilClientesComponent implements OnInit {
     private eventoService:EventoService) { }
 
   ngOnInit(): void {
-    this.eventoService.getAll().subscribe(data => {  this.eventos = data  });
+   
+    this.eventoService.getEventosCliente(1).subscribe(data => {  this.eventos = data  });
     
     this.verClienteForm = this.formBuilder.group({
       id: [''],
@@ -70,7 +71,7 @@ export class PerfilClientesComponent implements OnInit {
       enderecoComplemento: ['']
     });
     
-    this.clienteService.getById('24').subscribe(data => {
+    this.clienteService.getById('1').subscribe(data => {
       this.verClienteForm.setValue({
         'id': data.id,
         'nome': data.nome,

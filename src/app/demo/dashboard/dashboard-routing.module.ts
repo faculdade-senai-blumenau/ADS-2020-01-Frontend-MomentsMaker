@@ -7,6 +7,7 @@ import { EditarClienteComponent } from 'src/app/pages/editar-cliente/editar-clie
 import { CategoriaComponent } from 'src/app/pages/evento/categoria/categoria.component';
 import { EventoComponent } from 'src/app/pages/evento/evento/evento.component';
 import { FinalizaEventoComponent } from 'src/app/pages/evento/finaliza-evento/finaliza-evento.component';
+import { PerfilClientesComponent } from 'src/app/pages/perfils/perfil-clientes/perfil-clientes.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
       {
         path: 'finalizarEvento',
         component: FinalizaEventoComponent
+      },
+      {
+        path: 'perfilClientes',
+        component: PerfilClientesComponent
       }
     ]
   }

@@ -34,6 +34,7 @@ import { EditarClienteComponent } from './pages/editar-cliente/editar-cliente.co
 import { CategoriaComponent } from './pages/evento/categoria/categoria.component';
 import { EventoComponent } from './pages/evento/evento/evento.component';
 import { FinalizaEventoComponent } from './pages/evento/finaliza-evento/finaliza-evento.component';
+import { PerfilClientesComponent } from './pages/perfils/perfil-clientes/perfil-clientes.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { FinalizaEventoComponent } from './pages/evento/finaliza-evento/finaliza
     EditarClienteComponent,
     CategoriaComponent,
     EventoComponent,
-    FinalizaEventoComponent
+    FinalizaEventoComponent,
+    PerfilClientesComponent
   ],
   imports: [
     BrowserModule,

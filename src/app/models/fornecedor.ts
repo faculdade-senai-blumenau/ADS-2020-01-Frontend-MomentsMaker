@@ -1,8 +1,8 @@
 import { Endereco } from './endereco';
 import { Login } from './login';
 
-export interface Fornecedor {
-    id:Number;
+export class Fornecedor {
+    id:number;
     cnpj_cpf:String;
     nome_fantasia:String;
     tipoProfissional:Number;

@@ -39,13 +39,15 @@ export class FinalizaEventoComponent implements OnInit {
     window.localStorage.removeItem("fornecedorID");
     this.evento = new Evento();
 
+    this.evento.idFornecedor = Number(fornecedorid);
+
     this.categoriaService.getById(categoriaid).then( data => {
       this.categoriaObj = data});
     this.fornecedorService.getById(fornecedorid).then(data => { 
       this.fornecedor = data });
 
     this.evento.categoria = this.categoriaObj
-    this.clienteService.getById('24').subscribe(data => { this.evento.cliente = data })
+    this.clienteService.getById('1').subscribe(data => { this.evento.cliente = data })
     this.evento.fornecedor = this.fornecedor;
   }
 
@@ -58,7 +60,8 @@ export class FinalizaEventoComponent implements OnInit {
   }
 
   if(this.evento.fornecedor == null){
-    this.evento.fornecedor = this.fornecedor;
+    this.evento.fornecedor = new Fornecedor();
+    this.evento.fornecedor.id = this.fornecedor.id;
   }
 
    this.evento.dataInicio = this.dataInicial + ":" + this.horaInicio;

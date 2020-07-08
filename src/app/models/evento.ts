@@ -10,4 +10,5 @@ export class Evento {
     categoria:Categoria;
     cliente:Cliente;
     fornecedor:Fornecedor;
+    idFornecedor:number;
 }

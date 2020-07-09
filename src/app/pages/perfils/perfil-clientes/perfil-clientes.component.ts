@@ -17,7 +17,7 @@ import { Cliente } from 'src/app/models/cliente';
 })
 export class PerfilClientesComponent implements OnInit {
 
-  eventos:Evento[];
+  eventos:Evento[] = [];   
   cliente:Cliente;
  
   verClienteForm: FormGroup;
@@ -50,8 +50,10 @@ export class PerfilClientesComponent implements OnInit {
 
   ngOnInit(): void {
    
-    this.eventoService.getEventosCliente(1).subscribe(data => {  this.eventos = data  });
-    
+    this.eventoService.getEventosCliente(1).subscribe(data => {
+      this.eventos = data;
+    });
+
     this.verClienteForm = this.formBuilder.group({
       id: [''],
       nome: [''],

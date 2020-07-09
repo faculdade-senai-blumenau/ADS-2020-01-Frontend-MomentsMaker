@@ -9,5 +9,5 @@ export class Evento {
     dataFim:String;
     categoria:Categoria;
     cliente:Cliente;
-    fornecedor:Fornecedor;
+    fornecedores:Fornecedor;
 }

@@ -45,8 +45,8 @@ export class FinalizaEventoComponent implements OnInit {
       this.fornecedor = data });
 
     this.evento.categoria = this.categoriaObj
-    this.clienteService.getById('24').subscribe(data => { this.evento.cliente = data })
-    this.evento.fornecedor = this.fornecedor;
+    this.clienteService.getById('1').subscribe(data => { this.evento.cliente = data })
+    this.evento.fornecedores = this.fornecedor;
   }
 
   voltar() {
@@ -57,8 +57,8 @@ export class FinalizaEventoComponent implements OnInit {
     this.evento.categoria = this.categoriaObj;
   }
 
-  if(this.evento.fornecedor == null){
-    this.evento.fornecedor = this.fornecedor;
+  if(this.evento.fornecedores == null){
+    this.evento.fornecedores = this.fornecedor;
   }
 
    this.evento.dataInicio = this.dataInicial + ":" + this.horaInicio;

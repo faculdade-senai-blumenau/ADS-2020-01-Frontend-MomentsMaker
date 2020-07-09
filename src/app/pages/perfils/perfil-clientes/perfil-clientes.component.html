@@ -13,8 +13,8 @@
           <div *ngFor="let evento of eventos">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">{{evento.Categoria.nome}}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{evento.Fornecedor.nome_fantasia}}</h6>
+                <h5 class="card-title">{{evento.categoria.nome}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{evento.fornecedores.nome_fantasia}}</h6>
                 <p class="card-text">{{evento.dataInicio}} ate {{evento.dataFim}}</p>
               </div>
             </div>
@@ -132,4 +132,3 @@
     </div>
   </div>
 </div>
-<script src="perfil-cliesntes.js"></script>

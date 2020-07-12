@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+        <app-card>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <th>Identificador</th>
+                        <th>Nome Fantasia</th>
+                        <th>Média Avaliação</th>
+                        <th>Ação</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let fornecedor of fornecedores">
+                            <td>{{fornecedor.cnpj_cpf}}</td>
+                            <td>{{fornecedor.nome_fantasia}}</td>
+                            <td>{{fornecedor.mediaAvaliacao}}</td>
+                            <td>
+                                <div>
+                                    <button style="margin: 10px;" class="btn btn-primary"> Editar </button>
+                                    <button class="btn btn-danger" (click)="deletar(fornecedor)"> Deletar </button>
+                                  </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </app-card>
+    </div>
+</div>

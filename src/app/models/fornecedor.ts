@@ -2,14 +2,14 @@ import { Endereco } from './endereco';
 import { Login } from './login';
 
 export interface Fornecedor {
-    id:Number;
-    cnpj_cpf:String;
-    nome_fantasia:String;
-    tipoProfissional:Number;
-    razao_social:String;
-    ehSuplent:Boolean;
-    idEndereco:Endereco;
-    pessoaFisica:Boolean;
-    idLogin:Login;
-    mediaAvaliacao:Number;
+    id: number;
+    cnpj_cpf: string;
+    nome_fantasia: string;
+    tipoProfissional: number;
+    razao_social: string;
+    ehSuplent: boolean;
+    idEndereco: Endereco;
+    pessoaFisica: boolean;
+    idLogin: Login;
+    mediaAvaliacao: number;
 }

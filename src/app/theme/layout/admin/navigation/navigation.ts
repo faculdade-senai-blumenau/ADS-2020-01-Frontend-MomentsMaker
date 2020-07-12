@@ -60,7 +60,7 @@ const NavigationItems = [
         id: 'forms-element',
         title: 'Fornecedores',
         type: 'item',
-        url: '/dashboard/fornecedor',
+        url: '/dashboard/fornecedores',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
       },

@@ -35,9 +35,9 @@ import { CategoriaComponent } from './pages/evento/categoria/categoria.component
 import { EventoComponent } from './pages/evento/evento/evento.component';
 import { FinalizaEventoComponent } from './pages/evento/finaliza-evento/finaliza-evento.component';
 import { PerfilClientesComponent } from './pages/perfils/perfil-clientes/perfil-clientes.component';
-import { FornecedorComponent } from './fornecedor/fornecedor.component';
-import { FornecedoresComponent } from './fornecedores/fornecedores.component';
-import { EditarFornecedorComponent } from './editar-fornecedor/editar-fornecedor.component';
+import { FornecedorComponent } from './pages/fornecedor/fornecedor.component';
+import { FornecedoresComponent } from './pages/fornecedores/fornecedores.component';
+import { EditarFornecedorComponent } from './pages/editar-fornecedor/editar-fornecedor.component';
 
 @NgModule({
   declarations: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FornecedorService } from '../services/fornecedor.service';
-import { Fornecedor } from '../models/fornecedor';
+import { FornecedorService } from '../../services/fornecedor.service';
+import { Fornecedor } from '../../models/fornecedor';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,9 +21,9 @@ export class FornecedoresComponent implements OnInit {
   }
 
   editar(fornecedor: Fornecedor) {
-    window.localStorage.removeItem("clienteId");
-    window.localStorage.setItem("clienteId", fornecedor.id.toString());
-    this.router.navigate(['/dashboard/editar-cliente'])
+    window.localStorage.removeItem("fornecedorId");
+    window.localStorage.setItem("fornecedorId", fornecedor.id.toString());
+    this.router.navigate(['/dashboard/editar-fornecedor'])
   }
 
   deletar(fornecedor: Fornecedor) {

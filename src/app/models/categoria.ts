@@ -1,6 +1,6 @@
 export class Categoria {
-  id:String;
-  nome:String;
-  tipoProfissional: String;
-  descricao:String;
+  id: string;
+  nome: string;
+  tipoProfissional: string;
+  descricao: string;
 }

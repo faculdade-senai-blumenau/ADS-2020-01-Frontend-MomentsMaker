@@ -8,8 +8,9 @@ import { CategoriaComponent } from 'src/app/pages/evento/categoria/categoria.com
 import { EventoComponent } from 'src/app/pages/evento/evento/evento.component';
 import { FinalizaEventoComponent } from 'src/app/pages/evento/finaliza-evento/finaliza-evento.component';
 import { PerfilClientesComponent } from 'src/app/pages/perfils/perfil-clientes/perfil-clientes.component';
-import { FornecedorComponent } from 'src/app/fornecedor/fornecedor.component';
-import { FornecedoresComponent } from 'src/app/fornecedores/fornecedores.component';
+import { FornecedorComponent } from 'src/app/pages/fornecedor/fornecedor.component';
+import { FornecedoresComponent } from 'src/app/pages/fornecedores/fornecedores.component';
+import { EditarFornecedorComponent } from 'src/app/pages/editar-fornecedor/editar-fornecedor.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
       {
         path: 'fornecedores',
         component: FornecedoresComponent
+      },
+      {
+        path: 'editar-fornecedor',
+        component: EditarFornecedorComponent
       }
     ]
   }

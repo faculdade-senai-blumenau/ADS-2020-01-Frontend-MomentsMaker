@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-md-12">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>CNPJ_CPF</label>
+                    <input type="text" class="form-control" placeholder="cnpj_cpf" [(ngModel)]="cnpj_cpf" name="cnpj_cpf">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Nome Fantasia</label>
+                    <input type="text" class="form-control" placeholder="nome_fantasia" [(ngModel)]="nome_fantasia" name="nome_fantasia">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Categoria</label>
+                    <select style="height: 45px;" class="form-control" [(ngModel)]="categoria" name="categoria">
+                      <option *ngFor="let categoria of categorias">{{ categoria.id }} - {{ categoria.nome }}</option>
+                  </select>  
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Profissão</label>
+                    <input type="text" class="form-control" placeholder="tipoProfissional" [(ngModel)]="tipoProfissional" name="tipoProfissional">
+                </div>
+            </div>
+            <button style="margin: 10px;" class="btn btn-primary" (click)="save()">Salvar</button>
+            <button class="btn btn-danger" (click)="voltar()">Voltar</button>
+        </div>
+    </div>
+</div>

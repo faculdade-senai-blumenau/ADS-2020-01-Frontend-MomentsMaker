@@ -35,8 +35,6 @@ export class FinalizaEventoComponent implements OnInit {
   ngOnInit(): void {
     var categoriaid = window.localStorage.getItem("categoriaID");
     var fornecedorid = window.localStorage.getItem("fornecedorID");
-    window.localStorage.removeItem("categoriaID");
-    window.localStorage.removeItem("fornecedorID");
     this.evento = new Evento();
 
     this.categoriaService.getById(categoriaid).then( data => {
@@ -46,7 +44,7 @@ export class FinalizaEventoComponent implements OnInit {
 
     this.evento.categoria = this.categoriaObj
     this.clienteService.getById('1').subscribe(data => { this.evento.cliente = data })
-    this.evento.fornecedores = this.fornecedor;
+    this.evento.fornecedores = [this.fornecedor];
   }
 
   voltar() {
@@ -58,12 +56,16 @@ export class FinalizaEventoComponent implements OnInit {
   }
 
   if(this.evento.fornecedores == null){
-    this.evento.fornecedores = this.fornecedor;
+    this.fornecedor.id = +window.localStorage.getItem("fornecedorID");
+    
+    this.evento.fornecedores = [this.fornecedor];
   }
 
-   this.evento.dataInicio = this.dataInicial + ":" + this.horaInicio;
+   this.evento.dataInicio = this.dataInicial;
+   this.evento.horaInicio = this.horaInicio;
    
-   this.evento.dataFim = this.dataFinal + ":" + this.horaFim;
+   this.evento.dataFim = this.dataFinal;
+   this.evento.horaFim = this.horaFim;
 
    this.eventoService.save(this.evento);
 

@@ -12,23 +12,25 @@ import { Evento } from 'src/app/models/evento';
 })
 export class EventoComponent implements OnInit {
 
-  constructor(private fornecedroSercice:FornecedorService,
+  constructor(private fornecedorService:FornecedorService,
      private EventoService:EventoService,
      private router: Router) {
   }
   
   fornecedores: Fornecedor[]
   evento: Evento
-  dataInicial:Date
-  dataFinal:Date
-  idCategoria:string
+  dataInicio:Date
+  horaInicio: Date
+  dataFim:Date
+  horaFim: Date
+  idCategoria:number
 
   ngOnInit(): void {
     var categoria = window.localStorage.getItem("categoriaID");
-    this.idCategoria = categoria.toString();
+    this.idCategoria = +categoria;
     console.log(categoria);
     window.localStorage.removeItem("categoriaID");
-    this.fornecedroSercice.getAll().subscribe(data => { this.fornecedores = data })
+    this.fornecedorService.getAll().subscribe(data => { this.fornecedores = data })
 
   }
   voltar() {
@@ -36,13 +38,19 @@ export class EventoComponent implements OnInit {
   }
   filtrar()
   {
-    console.log(this.dataInicial);
-    console.log(this.dataFinal);
+    console.log(this.dataInicio, this.horaInicio, this.dataFim, this.horaFim);
+    if (this.dataInicio === undefined|| this.dataFim === undefined || this.horaInicio === undefined || this.horaFim === undefined) {
+      return alert("Data/hora inválida. Selecione data e hora válidas!")
+    }
+
+    this.fornecedorService.getPorDisponibilidade(this.dataInicio, this.horaInicio, this.dataFim, this.horaFim, this.idCategoria).subscribe(data => {
+      this.fornecedores = data;
+    });
   }
   gerarLink(idFornecedor:string)
   {
     window.localStorage.removeItem("categoriaID");
-    window.localStorage.setItem("categoriaID", this.idCategoria);
+    window.localStorage.setItem("categoriaID", this.idCategoria.toString());
     window.localStorage.removeItem("fornecedorID");
     window.localStorage.setItem("fornecedorID", idFornecedor);
     

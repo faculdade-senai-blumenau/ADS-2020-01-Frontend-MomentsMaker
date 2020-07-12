@@ -67,6 +67,6 @@ export class FinalizaEventoComponent implements OnInit {
 
    this.eventoService.save(this.evento);
 
-    this.router.navigate(["dashboard"])
+    this.router.navigate(["dashboard/perfilClientes"])
   }
 }

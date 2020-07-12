@@ -10,4 +10,5 @@ export class Cliente {
     sobrenome: string;
     login: Login;
     endereco: Endereco;
+    mediaAvaliacao : number;
 }

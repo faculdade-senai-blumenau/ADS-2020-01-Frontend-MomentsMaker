@@ -41,6 +41,7 @@ export class PerfilClientesComponent implements OnInit {
   dadospessoais:string;
   eventoativo:string;
   eventoinativo:string;
+
   constructor(private formBuilder: FormBuilder,
     private router: Router,
     private clienteService: ClienteService,
@@ -94,6 +95,7 @@ export class PerfilClientesComponent implements OnInit {
       })
     });
     
+    this.clienteService.getById('1').subscribe(data => {this.cliente = data});
     console.log( this.eventos);
    
   }

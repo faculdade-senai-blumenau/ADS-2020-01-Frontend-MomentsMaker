@@ -1,15 +1,16 @@
 <div class="col-sm-12">
   <div class="card">
     <div class="card-header">
-      <h5>Jardel SN</h5>
-      <h6><i class="feather icon-star-on f-18 text-c-yellow"></i> Nota 10</h6>
+      <h5>{{cliente.nome}}</h5>
+      <h6><i class="feather icon-star-on f-18 text-c-yellow"></i> {{cliente.mediaAvaliacao}}</h6>
     </div>
     <div class="card-body">
 
 
       <div class="row">
         <div class="col-md-6" id="evento" role="tabpanel" aria-labelledby="evento-tab">
-
+          <h2 class="text-center">Eventos Realizados</h2>
+          <br>
           <div *ngFor="let evento of eventos">
             <div class="card">
               <div class="card-body">

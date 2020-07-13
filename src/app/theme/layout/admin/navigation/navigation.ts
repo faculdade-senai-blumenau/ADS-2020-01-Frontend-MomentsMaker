@@ -42,9 +42,25 @@ const NavigationItems = [
       },
       {
         id: 'forms-element',
+        title: 'Novo Fornecedor',
+        type: 'item',
+        url: '/dashboard/fornecedor',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+      {
+        id: 'forms-element',
         title: 'Clientes',
         type: 'item',
         url: '/dashboard/clientes',
+        classes: 'nav-item',
+        icon: 'feather icon-file-text'
+      },
+      {
+        id: 'forms-element',
+        title: 'Fornecedores',
+        type: 'item',
+        url: '/dashboard/fornecedor',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
       },
@@ -55,39 +71,6 @@ const NavigationItems = [
         url: '/dashboard/categoria',
         classes: 'nav-item',
         icon: 'feather icon-file-text'
-      }
-
-    ]
-  },
-  {
-    id: 'avaliacao',
-    title: 'Avaliações',
-    type: 'group',
-    icon: 'feather icon-pie-chart',
-    children: [
-      {
-        id: 'charts',
-        title: 'Minhas Avaliações',
-        type: 'item',
-        url: '/charts/apex',
-        classes: 'nav-item',
-        icon: 'feather icon-heart'
-      }
-    ]
-  },
-  {
-    id: 'configuracao',
-    title: 'Configurações',
-    type: 'group',
-    icon: 'feather icon-edit',
-    children: [
-      {
-        id: 'charts',
-        title: 'Personalizar Perfil',
-        type: 'item',
-        url: '/charts/apex',
-        classes: 'nav-item',
-        icon: 'feather icon-edit'
       }
     ]
   }

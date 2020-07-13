@@ -1,3 +1,4 @@
+<h2 class="text-center">Fornecedores</h2>
 <div class="card">
 	<div class="card-header">
 		<h5>Filtro</h5>
@@ -7,14 +8,26 @@
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="form-group">
-						<label class="floating-label" for="dataInicial">Data inicial</label>
-						<input type="Date" class="form-control" id="dataInicial" [(ngModel)]="dataInicial" name="dataIncial">
+						<label class="floating-label" for="dataInicio">Data inicial</label>
+						<input type="Date" class="form-control" id="dataInicio" [(ngModel)]="dataInicio" name="dataInicio">
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label class="floating-label" for="horaInicio">Hora Inicio</label>
+						<input type="time" class="form-control" id="horaInicio" [(ngModel)]="horaInicio" name="horaInicio">
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group">
-						<label class="floating-label" for="dataFinal">Data Final</label>
-						<input type="Date" class="form-control" id="dataFinal" [(ngModel)]="dataFinal" name="dataFinal">
+						<label class="floating-label" for="dataFim">Data Final</label>
+						<input type="Date" class="form-control" id="dataFim" [(ngModel)]="dataFim" name="dataFim">
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+						<label class="floating-label" for="horaFim">Hora Fim</label>
+						<input type="time" class="form-control" id="horaFim" [(ngModel)]="horaFim" name="horaFim">
 					</div>
 				</div>
 			</div>

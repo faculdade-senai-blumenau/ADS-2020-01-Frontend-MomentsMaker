@@ -127,7 +127,7 @@ export class ClienteComponent implements OnInit {
       console.log(cliente);
     }
 
-    this.router.navigate(["dashboard"]);
+    this.router.navigate(["dashboard/perfilClientes"]);
 
   }
 

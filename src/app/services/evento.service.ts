@@ -29,6 +29,10 @@ export class EventoService {
     return await this.http.get<Evento>(this.apiUrl + id).toPromise();
   }
 
+  getEventosCliente(id: number): Observable<Evento[]> {
+    return this.http.get<Evento[]>(this.apiUrl +"cliente/"+ id);
+}
+
   update(evento: Evento): Observable<ApiResponse> {
     return this.http.put<ApiResponse>(this.apiUrl, evento);
   }
